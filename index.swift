@@ -21,7 +21,7 @@
 	}
 
 	"a".htm(["href='https://github.com/ColdGrub1384'"]) {
-		"img".htm(["src='http://coldg.ddns.net/octocat.png'"])
+		"img".htm(["src='octocat.png'"])
 		print("GitHub")
 	}
 
