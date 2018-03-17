@@ -44,6 +44,7 @@ SwiftyWeb().render()
 "style".htm() {
 	print("* {")
 	print("font-family: 'Helvetica', 'Arial', sans-serif")
+	print("color: white;")
 	print("}")
 
 	print("a:link {")
@@ -68,9 +69,5 @@ SwiftyWeb().render()
 	print("body {")
 	print("background-image: url('background.jpg');")
 	print("background-position: center;")
-	print("}")
-
-	print("* {")
-	print("color: white")
 	print("}")
 }
