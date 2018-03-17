@@ -66,6 +66,6 @@
 	print("}")
     
     print("#container {")
-    print("background-color: rgba(0,0,0,0.2);")
+    print("background-color: rgba(0,0,0,0.5);")
     print("}")
 }
