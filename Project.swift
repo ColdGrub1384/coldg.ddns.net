@@ -27,7 +27,7 @@ class Project {
 	/// Render the project as HTML.
 	/// Do not override without calling the super function!
 	func render() {
-		"h3".htm() {
+		"h2".htm() {
 			print(self.name)
 		}
 	

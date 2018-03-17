@@ -16,16 +16,12 @@
 
 "body".htm() {
 	"div".htm(["id='container'"]) {
-        "h1".htm() {
-            print("ColdGrub1384")
-        }
-        
         "a".htm(["href='https://github.com/ColdGrub1384'"]) {
             "img".htm(["src='octocat.png'"])
             print("GitHub")
         }
         
-        "h2".htm() {
+        "h1".htm() {
             print("My projects")
         }
         
