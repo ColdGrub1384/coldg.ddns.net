@@ -47,12 +47,12 @@ SwiftyWeb().render()
 	print("}")
 
 	print("a:link {")
-	print("color: blue;")
+	print("color: rgb(0, 122, 255);")
 	print("text-decoration: none;")
 	print("}")
 
 	print("a:visited {")
-	print("color: blue;")
+	print("color: rgb(0, 122, 255);")
 	print("text-decoration: none;")
 	print("}")
 
