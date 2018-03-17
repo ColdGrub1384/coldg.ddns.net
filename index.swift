@@ -60,4 +60,17 @@ SwiftyWeb().render()
   	print("height: 1em;")
   	print("width: auto;")
 	print("}")
+
+	print("center {")
+	print("background-color: transparent;")
+	print("}")
+
+	print("body {")
+	print("background-image: url('background.jpg');")
+	print("background-position: center;")
+	print("}")
+
+	print("* {")
+	print("color: white")
+	print("}")
 }
