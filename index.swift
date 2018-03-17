@@ -15,26 +15,24 @@
 // MARK: Body
 
 "body".htm() {
-
-	"h1".htm() {
-		print("ColdGrub1384")
-	}
-
-	"a".htm(["href='https://github.com/ColdGrub1384'"]) {
-		"img".htm(["src='octocat.png'"])
-		print("GitHub")
-	}
-
-	"h2".htm() {
-		print("My projects")
+	"div".htm(["id='container'"]) {
+        "h1".htm() {
+            print("ColdGrub1384")
+        }
+        
+        "a".htm(["href='https://github.com/ColdGrub1384'"]) {
+            "img".htm(["src='octocat.png'"])
+            print("GitHub")
+        }
+        
+        "h2".htm() {
+            print("My projects")
+        }
+        
+        Pisth().render()
+        SwiftyWeb().render()
 	}
 }
-
-// MARK: - Projects
-
-Pisth().render()
-SwiftyWeb().render()
-
 
 "/center".htm(single: true)
 
@@ -43,7 +41,7 @@ SwiftyWeb().render()
 
 "style".htm() {
 	print("* {")
-	print("font-family: 'Helvetica', 'Arial', sans-serif")
+    print("font-family: 'Helvetica', 'Arial', sans-serif;")
 	print("color: white;")
 	print("}")
 
@@ -70,4 +68,8 @@ SwiftyWeb().render()
 	print("background-image: url('background.jpg');")
 	print("background-position: center;")
 	print("}")
+    
+    print("#container {")
+    print("background-color: rgba(0,0,0,0.2);")
+    print("}")
 }
