@@ -74,7 +74,7 @@
 	print("background-position: center;")
 	print("}")
     
-    print(".container {")
-    print("background-color: rgba(0,0,0,0.5);")
-    print("}")
+	print(".container {")
+	print("background-color: rgba(0,0,0,0.5);")
+	print("}")
 }
