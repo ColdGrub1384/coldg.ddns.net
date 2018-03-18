@@ -1,4 +1,3 @@
-"center".htm(single: true)
 
 // MARK: - Head
 
@@ -15,32 +14,48 @@
 // MARK: Body
 
 "body".htm() {
-	"div".htm(["class='container'"]) {
-        
-        "br/".htm(single: true)
-        
-        "h1".htm() {
-            print("My projects")
+    
+    print("<center>")
+	
+    "div".htm(["class='section'"]) {
+        "div".htm(["class='container'", "onclick='showProjects()'"]) {
+            
+            "br/".htm(single: true)
+            
+            "center".htm() {
+                "h1".htm() {
+                    print("My projects")
+                }
+                    
+                "a".htm(["href='https://github.com/ColdGrub1384'"]) {
+                    "img".htm(["src='octocat.png'"])
+                    print("GitHub")
+                }
+                    
+                for i in 1...3 {
+                    "br/".htm(single: true)
+                }
+                    
+                "a".htm(["onclick='clickProjects()'"]) {
+                    print("Click to show more")
+                }
+            }
+            
+            "br/".htm(single: true)
+            "br/".htm(single: true)
         }
         
-        "a".htm(["href='https://github.com/ColdGrub1384'"]) {
-            "img".htm(["src='octocat.png'"])
-            print("GitHub")
-        }
+        "br/".htm(single: true)
         
-        "br/".htm(single: true)
-        "br/".htm(single: true)
-	}
+        "div".htm(["id='projects'"]) {
+            Pisth().render()
+            "br/".htm(single: true)
+            SwiftyWeb().render()
+        }
+    }
     
-    "br/".htm(single: true)
-    
-    Pisth().render()
-    "br/".htm(single: true)
-    SwiftyWeb().render()
+    print("</center>")
 }
-
-"/center".htm(single: true)
-
 
 // MARK: - Style
 
@@ -78,4 +93,24 @@
 	print("background-color: rgba(0,0,0,0.5);")
 	print("border-radius: 25px")
 	print("}")
+    
+    print(".section {")
+    print("width: 50%;")
+    print("}")
+}
+
+// MARK: - Script
+
+"script".htm() {
+    
+    print("var projects = document.getElementById('projects');")
+    print("projects.style.display = 'none';")
+    
+    print("function showProjects() {")
+    print("if (projects.style.display == 'none') {")
+    print("projects.style.display = 'block';")
+    print("} else {")
+    print("projects.style.display = 'none';")
+    print("}")
+    print("}")
 }

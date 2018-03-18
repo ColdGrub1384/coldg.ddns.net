@@ -32,17 +32,19 @@ class Project {
             
             "br/".htm(single: true)
             
-            "h2".htm() {
-                print(self.name)
-            }
-            
-            "p".htm() {
-                print(self.description+"<br>")
+            "center".htm() {
+                "h2".htm() {
+                    print(self.name)
+                }
                 
-                for url in self.urls {
-                    "br".htm(single: true)
-                    "a".htm(["href='\(url.url.absoluteString)'"]) {
-                        print(url.title)
+                "p".htm() {
+                    print(self.description+"<br>")
+                    
+                    for url in self.urls {
+                        "br".htm(single: true)
+                        "a".htm(["href='\(url.url.absoluteString)'"]) {
+                            print(url.title)
+                        }
                     }
                 }
             }
