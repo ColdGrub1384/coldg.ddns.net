@@ -29,6 +29,7 @@
         }
         
         "br/".htm(single: true)
+        "br/".htm(single: true)
 	}
     
     "br/".htm(single: true)
