@@ -61,41 +61,41 @@
 
 "style".htm() {
 	print("* {")
-    print("font-family: 'Helvetica', 'Arial', sans-serif;")
-	print("color: white;")
+    print(" font-family: 'Helvetica', 'Arial', sans-serif;")
+	print(" color: white;")
 	print("}")
 
 	print("a:link {")
-	print("color: rgb(0, 122, 255);")
-	print("text-decoration: none;")
+	print(" color: rgb(0, 122, 255);")
+	print(" text-decoration: none;")
 	print("}")
 
 	print("a:visited {")
-	print("color: rgb(0, 122, 255);")
-	print("text-decoration: none;")
+	print(" color: rgb(0, 122, 255);")
+	print(" text-decoration: none;")
 	print("}")
 
 	print("a img {")
-  	print("height: 1em;")
-  	print("width: auto;")
+  	print(" height: 1em;")
+  	print(" width: auto;")
 	print("}")
 
 	print("center {")
-	print("background-color: transparent;")
+	print(" background-color: transparent;")
 	print("}")
 
 	print("body {")
-	print("background-image: url('background.jpg');")
-	print("background-position: center;")
+	print(" background-image: url('background.jpg');")
+	print(" background-position: center;")
 	print("}")
     
 	print(".container {")
-	print("background-color: rgba(0,0,0,0.5);")
-	print("border-radius: 25px")
+	print(" background-color: rgba(0,0,0,0.5);")
+	print(" border-radius: 25px")
 	print("}")
     
     print(".section {")
-    print("width: 50%;")
+    print(" width: 50%;")
     print("}")
 }
 
@@ -107,10 +107,10 @@
     print("projects.style.display = 'none';")
     
     print("function showProjects() {")
-    print("if (projects.style.display == 'none') {")
-    print("projects.style.display = 'block';")
-    print("} else {")
-    print("projects.style.display = 'none';")
-    print("}")
+    print(" if (projects.style.display == 'none') {")
+    print("  projects.style.display = 'block';")
+    print(" } else {")
+    print("  projects.style.display = 'none';")
+    print(" }")
     print("}")
 }
