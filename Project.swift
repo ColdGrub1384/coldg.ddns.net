@@ -23,12 +23,26 @@ class Project {
 	var urls: [URLForProject] {
 		return []
 	}
+    
+    /// Details.
+    func details() {
+        
+    }
 
 	/// Render the project as HTML.
 	/// Do not override without calling the super function!
-	func render() {
+    ///
+    /// - Parameters:
+    ///     - showDetails: If print the details and show the page in full screen.
+    func render(showDetails: Bool = false) {
         
-        "div".htm(["class='container'"]) {
+        var style = ""
+        
+        if showDetails {
+            style = "width: 100%; height: 100%;"
+        }
+        
+        "div".htm(["class='container'", "onclick='window.location.href = \"?project=\(name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")\"'", "style='\(style)'"]) {
             
             "br/".htm(single: true)
             
@@ -39,12 +53,18 @@ class Project {
                 
                 "p".htm() {
                     print(self.description+"<br>")
-                    
-                    for url in self.urls {
-                        "br".htm(single: true)
-                        "a".htm(["href='\(url.url.absoluteString)'"]) {
-                            print(url.title)
-                        }
+                }
+                
+                if showDetails {
+                    self.details()
+                }
+                
+                "br".htm(single: true)
+                
+                for url in self.urls {
+                    "br/".htm(single: true)
+                    "a".htm(["href='\(url.url.absoluteString)'"]) {
+                        print(url.title)
                     }
                 }
             }

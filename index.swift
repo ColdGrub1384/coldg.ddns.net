@@ -7,7 +7,7 @@
     "link".htm(["rel='stylesheet'", "href='style.css'"])
 	"meta".htm(["charset='UTF-8'"])
 	"title".htm() {
-		print("ColdGrub1384")
+		print(GET["project"] ?? "ColdGrub1384")
 	}
 }
 
@@ -18,39 +18,56 @@
     print("<center>")
 	
     "div".htm(["class='section'"]) {
-        "div".htm(["class='container'", "onclick='showProjects()'"]) {
-            
-            "br/".htm(single: true)
-            
-            "center".htm() {
-                "h1".htm() {
-                    print("My projects")
-                }
+        if GET["project"] == nil || GET["project"] == "" { // Show projects
+            "div".htm(["class='container'", "onclick='showProjects()'"]) {
+                
+                "br/".htm(single: true)
+                
+                "center".htm() {
+                    "h1".htm() {
+                        print("My projects")
+                    }
                     
-                "a".htm(["href='https://github.com/ColdGrub1384'"]) {
-                    "img".htm(["src='octocat.png'"])
-                    print("GitHub")
-                }
+                    "a".htm(["href='https://github.com/ColdGrub1384'"]) {
+                        "img".htm(["src='octocat.png'"])
+                        print("GitHub")
+                    }
                     
-                for i in 1...3 {
-                    "br/".htm(single: true)
-                }
+                    for i in 1...3 {
+                        "br/".htm(single: true)
+                    }
                     
-                "a".htm(["onclick='clickProjects()'"]) {
-                    print("Click to show more")
+                    "a".htm(["onclick='clickProjects()'"]) {
+                        print("Click to show more")
+                    }
                 }
+                
+                "br/".htm(single: true)
+                "br/".htm(single: true)
             }
             
             "br/".htm(single: true)
-            "br/".htm(single: true)
-        }
-        
-        "br/".htm(single: true)
-        
-        "div".htm(["id='projects'"]) {
-            Pisth().render()
-            "br/".htm(single: true)
-            SwiftyWeb().render()
+            
+            "div".htm(["id='projects'"]) {
+                Pisth().render()
+                "br/".htm(single: true)
+                SwiftyWeb().render()
+            }
+        } else { // Show requested project
+            guard let project = GET["project"] else {
+                return
+            }
+            
+            switch project {
+            case "Pisth":
+                Pisth().render(showDetails: true)
+            case "SwiftyWeb":
+                SwiftyWeb().render(showDetails: true)
+            default:
+                "h1".htm() {
+                    print("Project not found!")
+                }
+            }
         }
     }
     

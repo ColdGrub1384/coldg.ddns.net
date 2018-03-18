@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><pre class=" language-swift"><code class="prism  language-swift"><span class="token comment">// GET</span>
+<span class="token string">"h1"</span><span class="token punctuation">.</span><span class="token function">htm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"GET Parameters"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token string">"ul"</span><span class="token punctuation">.</span><span class="token function">htm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token keyword">in</span> <span class="token constant">GET</span> <span class="token punctuation">{</span>
+        <span class="token string">"li"</span><span class="token punctuation">.</span><span class="token function">htm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>key<span class="token operator">+</span><span class="token string">":"</span><span class="token operator">+</span>value<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// POST</span>
+<span class="token string">"h1"</span><span class="token punctuation">.</span><span class="token function">htm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"POST Parameters"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token string">"ul"</span><span class="token punctuation">.</span><span class="token function">htm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token keyword">in</span> <span class="token constant">POST</span> <span class="token punctuation">{</span>
+        <span class="token string">"li"</span><span class="token punctuation">.</span><span class="token function">htm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>key<span class="token operator">+</span><span class="token string">":"</span><span class="token operator">+</span>value<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</div>
+</body>
+
+</html>
