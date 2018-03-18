@@ -4,7 +4,7 @@
 "head".htm() {
 
 	"meta".htm(["name=viewport", "content='width=device-width, initial-scale=1'"])
-
+    "link".htm(["rel='stylesheet'", "href='style.css'"])
 	"meta".htm(["charset='UTF-8'"])
 	"title".htm() {
 		print("ColdGrub1384")
@@ -55,56 +55,6 @@
     }
     
     print("</center>")
-}
-
-// MARK: - Style
-
-"style".htm() {
-	print("* {")
-    print(" font-family: 'Helvetica', 'Arial', sans-serif;")
-	print(" color: black;")
-	print("}")
-
-	print("a:link {")
-	print(" color: rgb(0, 122, 255);")
-	print(" text-decoration: none;")
-	print("}")
-
-	print("a:visited {")
-	print(" color: rgb(0, 122, 255);")
-	print(" text-decoration: none;")
-	print("}")
-
-	print("a img {")
-  	print(" height: 1em;")
-  	print(" width: auto;")
-	print("}")
-
-	print("center {")
-	print(" background-color: transparent;")
-	print("}")
-
-	print("body {")
-	print(" background-image: url('background.jpg');")
-	print(" background-position: center;")
-	print("}")
-    
-	print(".container {")
-	print(" background-color: rgba(255,255,255,0.5);")
-	print(" border-radius: 25px")
-	print("}")
-    
-    print("@media screen and (max-width: 540px) {")
-    print(" .section {")
-    print("  width: 80%;")
-    print(" }")
-    print("}")
-    
-    print("@media screen and (min-width: 540px) {")
-    print(" .section {")
-    print("  width: 50%;")
-    print(" }")
-    print("}")
 }
 
 // MARK: - Script

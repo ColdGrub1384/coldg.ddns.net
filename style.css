@@ -1,0 +1,46 @@
+
+* {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: black;
+}
+
+a:link {
+    color: rgb(0, 122, 255);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(0, 122, 255);
+    text-decoration: none;
+}
+
+a img {
+    height: 1em;
+    width: auto;
+}
+
+center {
+    background-color: transparent;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-position: center;
+}
+
+.container {
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 25px
+}
+
+@media screen and (max-width: 540px) {
+    .section {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    .section {
+        width: 50%;
+    }
+}
