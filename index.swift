@@ -94,8 +94,16 @@
 	print(" border-radius: 25px")
 	print("}")
     
-    print(".section {")
-    print(" width: 50%;")
+    print("@media screen and (max-width: 540px) {")
+    print(" .section {")
+    print("  width: 80%;")
+    print(" }")
+    print("}")
+    
+    print("@media screen and (min-width: 540px) {")
+    print(" .section {")
+    print("  width: 50%;")
+    print(" }")
     print("}")
 }
 
