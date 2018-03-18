@@ -76,5 +76,6 @@
     
 	print(".container {")
 	print("background-color: rgba(0,0,0,0.5);")
+	print("border-radius: 25px")
 	print("}")
 }
