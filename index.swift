@@ -62,7 +62,7 @@
 "style".htm() {
 	print("* {")
     print(" font-family: 'Helvetica', 'Arial', sans-serif;")
-	print(" color: white;")
+	print(" color: black;")
 	print("}")
 
 	print("a:link {")
@@ -90,7 +90,7 @@
 	print("}")
     
 	print(".container {")
-	print(" background-color: rgba(0,0,0,0.5);")
+	print(" background-color: rgba(255,255,255,0.5);")
 	print(" border-radius: 25px")
 	print("}")
     
