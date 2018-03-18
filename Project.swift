@@ -27,19 +27,27 @@ class Project {
 	/// Render the project as HTML.
 	/// Do not override without calling the super function!
 	func render() {
-		"h2".htm() {
-			print(self.name)
-		}
-	
-		"p".htm() {
-			print(self.description+"<br>")
-
-			for url in self.urls {
-				"br".htm(single: true)
-				"a".htm(["href='\(url.url.absoluteString)'"]) {
-					print(url.title)
-				}
-			}
-		}
+        
+        "div".htm(["class='container'"]) {
+            
+            "br/".htm(single: true)
+            
+            "h2".htm() {
+                print(self.name)
+            }
+            
+            "p".htm() {
+                print(self.description+"<br>")
+                
+                for url in self.urls {
+                    "br".htm(single: true)
+                    "a".htm(["href='\(url.url.absoluteString)'"]) {
+                        print(url.title)
+                    }
+                }
+            }
+            
+            "br/".htm(single: true)
+        }
 	}
 }

@@ -15,19 +15,27 @@
 // MARK: Body
 
 "body".htm() {
-	"div".htm(["id='container'"]) {
-        "a".htm(["href='https://github.com/ColdGrub1384'"]) {
-            "img".htm(["src='octocat.png'"])
-            print("GitHub")
-        }
+	"div".htm(["class='container'"]) {
+        
+        "br/".htm(single: true)
         
         "h1".htm() {
             print("My projects")
         }
         
-        Pisth().render()
-        SwiftyWeb().render()
+        "a".htm(["href='https://github.com/ColdGrub1384'"]) {
+            "img".htm(["src='octocat.png'"])
+            print("GitHub")
+        }
+        
+        "br/".htm(single: true)
 	}
+    
+    "br/".htm(single: true)
+    
+    Pisth().render()
+    "br/".htm(single: true)
+    SwiftyWeb().render()
 }
 
 "/center".htm(single: true)
@@ -65,7 +73,7 @@
 	print("background-position: center;")
 	print("}")
     
-    print("#container {")
+    print(".container {")
     print("background-color: rgba(0,0,0,0.5);")
     print("}")
 }
