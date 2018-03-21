@@ -39,7 +39,7 @@ class Project {
         var style = ""
         
         if showDetails {
-            style = "width: 100%; height: 100%;"
+            style = "width: 100%;"
         }
         
         "div".htm(["class='container'", "onclick='window.location.href = \"?project=\(name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")\"'", "style='\(style)'"]) {
