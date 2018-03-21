@@ -45,7 +45,7 @@
                 "br/".htm(single: true)
                 "br/".htm(single: true)
             }
-            
+             
             "br/".htm(single: true)
             
             "div".htm(["id='projects'"]) {
@@ -57,7 +57,43 @@
             guard let project = GET["project"] else {
                 return
             }
+
+             "div".htm(["class='container'", "onclick='window.location.href = \"?showProjects\"'"]) {
+
+                "br/".htm(single: true)
+
+                "center".htm() {
+                    "h1".htm() {
+                        print("My projects")
+                    }
+
+                    "a".htm(["href='https://github.com/ColdGrub1384'"]) {
+                        "img".htm(["src='octocat.png'"])
+                        print("GitHub")
+                    }
+
+                    for i in 1...3 {
+                        "br/".htm(single: true)
+                    }
+
+                    "a".htm(["onclick='window.location.href = \"?showProjects\"'"]) {
+                        print("Click to show more")
+                    }
+                }
+
+                "br/".htm(single: true)
+                "br/".htm(single: true)
+            }
+
+            "br/".htm(single: true)
+
+            "div".htm(["id='projects'"]) {
+                Pisth().render()
+                "br/".htm(single: true)
+                SwiftyWeb().render()
+            }
             
+
             switch project {
             case "Pisth":
                 Pisth().render(showDetails: true)
@@ -88,4 +124,8 @@
     print("  projects.style.display = 'none';")
     print(" }")
     print("}")
+
+    if GET["showProjects"] != nil || GET["showProjects"] == "true" {
+        print("showProjects()")
+    }
 }
