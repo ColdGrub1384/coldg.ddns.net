@@ -11,7 +11,8 @@ class SwiftyWeb: Project {
 	}
     
     override func details() {
-        print("With SwiftyWeb, you can code HTML with a Swifty syntax and do server side things.")
+        print("With SwiftyWeb, you can code HTML with a Swifty syntax and do server side things.<br/><br/>")
+        "iframe".htm(["src='swiftyweb.html'", "width=90%", "height=90%", "frameborder=0"])
     }
 
 	override var urls: [URLForProject] {
