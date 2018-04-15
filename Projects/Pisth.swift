@@ -15,7 +15,8 @@ class Pisth: Project {
 	}
     
     override func details() {
-        "img".htm(["src='https://pisth.github.io/screenshots.png'", "width=90%"])
+        
+        "iframe".htm(["src='https://pisth.github.io'", "width=100%", "height=100%", "frameBorder=0", "style='border-radius:25px'"])
     }
 
 }
