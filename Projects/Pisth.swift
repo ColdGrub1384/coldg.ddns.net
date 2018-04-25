@@ -16,7 +16,7 @@ class Pisth: Project {
     
     override func details() {
         
-        "iframe".htm(["src='https://pisth.github.io'", "width=100%", "height=100%", "frameBorder=0", "style='border-radius:25px'"])
+        "iframe".htm(["src='https://pisth.github.io/ios'", "width=100%", "height=100%", "frameBorder=0", "style='border-radius:25px'"])
     }
 
 }
