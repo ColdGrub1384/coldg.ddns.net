@@ -101,7 +101,7 @@
                 Pisth().render(showDetails: true)
             case "SwiftyWeb":
                 SwiftyWeb().render(showDetails: true)
-	    case "PisthAPT":
+	    case "Pisth APT":
 		PisthAPT().render(showDetails: true)
             default:
                 "h1".htm() {
