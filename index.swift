@@ -101,6 +101,8 @@
                 Pisth().render(showDetails: true)
             case "SwiftyWeb":
                 SwiftyWeb().render(showDetails: true)
+	    case "PisthAPT":
+		PisthAPT().render(showDetails: true)
             default:
                 "h1".htm() {
                     print("Project not found!")
