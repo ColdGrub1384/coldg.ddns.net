@@ -52,6 +52,8 @@
                 Pisth().render()
                 "br/".htm(single: true)
                 SwiftyWeb().render()
+		"br/".htm(single: true)
+		PisthAPT().render()
             }
         } else { // Show requested project
             guard let project = GET["project"] else {
