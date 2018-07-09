@@ -51,9 +51,9 @@
             "div".htm(["id='projects'"]) {
                 Pisth().render()
                 "br/".htm(single: true)
-                SwiftyWeb().render()
-		"br/".htm(single: true)
-		PisthAPT().render()
+            		SwiftyWeb().render()
+		         "br/".htm(single: true)
+		          PisthAPT().render()
             }
         } else { // Show requested project
             guard let project = GET["project"] else {
@@ -89,7 +89,7 @@
 
             "br/".htm(single: true)
 
-            "div".htm(["id='projects'"]) {
+            "div".htm(["id='projects'", "style='visiblity:\"hidden\"'"]) {
                 Pisth().render()
                 "br/".htm(single: true)
                 SwiftyWeb().render()
@@ -101,8 +101,8 @@
                 Pisth().render(showDetails: true)
             case "SwiftyWeb":
                 SwiftyWeb().render(showDetails: true)
-	    case "Pisth APT":
-		PisthAPT().render(showDetails: true)
+	    	  case "Pisth APT":
+		   		   PisthAPT().render(showDetails: true)
             default:
                 "h1".htm() {
                     print("Project not found!")
@@ -119,13 +119,12 @@
 "script".htm() {
     
     print("var projects = document.getElementById('projects');")
-    print("projects.style.display = 'none';")
     
     print("function showProjects() {")
-    print(" if (projects.style.display == 'none') {")
-    print("  projects.style.display = 'block';")
+    print(" if (projects.style.opacity == '1') {")
+    print("  projects.style. opacity = '0';")
     print(" } else {")
-    print("  projects.style.display = 'none';")
+    print("  projects.style. opacity = '1';")
     print(" }")
     print("}")
 
