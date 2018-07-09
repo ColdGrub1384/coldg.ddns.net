@@ -119,7 +119,7 @@
 "script".htm() {
     
     print("var projects = document.getElementById('projects');")
-    
+    print("projects.style. opacity = '0';")
     print("function showProjects() {")
     print(" if (projects.style.opacity == '1') {")
     print("  projects.style. opacity = '0';")

@@ -36,10 +36,6 @@ body {
     border-radius: 25px
 }
 
-.projects {
-	opacity: '0';
-}
-
 @media screen and (max-width: 540px) {
     .section {
         width: 80%;
