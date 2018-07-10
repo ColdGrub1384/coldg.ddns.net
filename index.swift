@@ -119,16 +119,17 @@
 "script".htm() {
     
     print("var projects = document.getElementById('projects');")
-    print("projects.style. opacity = '0';")
     print("function showProjects() {")
-    print(" if (projects.style.opacity == '1') {")
-    print("  projects.style. opacity = '0';")
+    print(" if (projects.style.display == 'none') {")
+    print("  projects.style.display = 'block';")
     print(" } else {")
-    print("  projects.style. opacity = '1';")
+    print("  projects.style.display = 'none';")
     print(" }")
     print("}")
 
     if GET["showProjects"] != nil || GET["showProjects"] == "true" {
-        print("showProjects()")
+        print("projects.style.display = 'block';")
+    } else {
+        print("projects.style.display = 'none';")
     }
 }
