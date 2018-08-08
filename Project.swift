@@ -9,28 +9,28 @@ struct URLForProject {
 /// Template class for a project.
 class Project {
 
-	/// Name of project.
-	var name: String {
-		return ""
-	}
+    /// Name of project.
+    var name: String {
+        return ""
+    }
 
-	/// Description of project.
-	var description: String {
-		return ""
-	}
+    /// Description of project.
+    var description: String {
+	return ""
+    }
 
-	/// URL for project.
-	var urls: [URLForProject] {
-		return []
-	}
+    /// URL for project.
+    var urls: [URLForProject] {
+        return []
+    }
     
     /// Details.
     func details() {
         
     }
 
-	/// Render the project as HTML.
-	/// Do not override without calling the super function!
+    /// Render the project as HTML.
+    /// Do not override without calling the super function!
     ///
     /// - Parameters:
     ///     - showDetails: If print the details and show the page in full screen.
@@ -71,5 +71,5 @@ class Project {
             
             "br/".htm(single: true)
         }
-	}
+    }
 }
