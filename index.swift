@@ -3,12 +3,12 @@
 
 "head".htm() {
 
-	"meta".htm(["name=viewport", "content='width=device-width, initial-scale=1'"])
+    "meta".htm(["name=viewport", "content='width=device-width, initial-scale=1'"])
     "link".htm(["rel='stylesheet'", "href='style.css'"])
-	"meta".htm(["charset='UTF-8'"])
-	"title".htm() {
-		print(GET["project"] ?? "ColdGrub1384")
-	}
+    "meta".htm(["charset='UTF-8'"])
+    "title".htm() {
+	print(GET["project"] ?? "ColdGrub1384")
+    }
 }
 
 // MARK: Body
