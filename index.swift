@@ -51,9 +51,7 @@
             "div".htm(["id='projects'"]) {
                 Pisth().render()
                 "br/".htm(single: true)
-            		SwiftyWeb().render()
-		         "br/".htm(single: true)
-		          PisthAPT().render()
+            	SwiftyWeb().render()
             }
         } else { // Show requested project
             guard let project = GET["project"] else {
@@ -101,8 +99,6 @@
                 Pisth().render(showDetails: true)
             case "SwiftyWeb":
                 SwiftyWeb().render(showDetails: true)
-	    	  case "Pisth APT":
-		   		   PisthAPT().render(showDetails: true)
             default:
                 "h1".htm() {
                     print("Project not found!")
