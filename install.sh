@@ -5,6 +5,5 @@ fi
 
 swiftw -o $1/index.cgi  Projects/* Project.swift index.swift
 cp octocat.png $1/
-cp background.jpg $1/
 cp style.css $1/
 cp swiftyweb.html $1/
