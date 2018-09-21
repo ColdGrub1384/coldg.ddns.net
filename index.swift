@@ -50,6 +50,8 @@
             
             "div".htm(["id='projects'"]) {
                 Pisth().render()
+		"br/".htm(single: true)
+		Pyto().render()
                 "br/".htm(single: true)
             	SwiftyWeb().render()
             }
@@ -97,6 +99,8 @@
             switch project {
             case "Pisth":
                 Pisth().render(showDetails: true)
+            case "Pyto":
+                Pyto().render(showDetails: true)
             case "SwiftyWeb":
                 SwiftyWeb().render(showDetails: true)
             default:
