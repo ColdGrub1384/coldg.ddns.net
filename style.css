@@ -24,7 +24,7 @@ center {
 }
 
 body {
-    background: url('background.jpg') no-repeat fixed;
+    background-color: rgb(49, 104, 255);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
